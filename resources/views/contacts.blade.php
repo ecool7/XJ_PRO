@@ -80,20 +80,44 @@
             <!-- Contact Form -->
             <div class="max-w-2xl">
                 <h2 class="font-display text-2xl font-medium text-[#0A0A0A] mb-8 tracking-tight">Send Us a Message</h2>
-                <form class="space-y-6">
+                
+                @if(session('success'))
+                    <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                @if(session('error'))
+                    <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
+                @if($errors->any())
+                    <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                        <ul class="list-disc list-inside">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <form action="{{ route('contacts.send') }}" method="POST" class="space-y-6">
+                    @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block mb-2 text-xs text-[#737373] uppercase tracking-wider font-medium">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors">
+                            <input type="text" id="name" name="name" value="{{ old('name') }}" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors">
                         </div>
                         <div>
                             <label for="email" class="block mb-2 text-xs text-[#737373] uppercase tracking-wider font-medium">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors">
+                            <input type="email" id="email" name="email" value="{{ old('email') }}" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors">
                         </div>
                     </div>
                     <div>
                         <label for="message" class="block mb-2 text-xs text-[#737373] uppercase tracking-wider font-medium">Message</label>
-                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors resize-y"></textarea>
+                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg border border-[#E5E5E5] bg-white text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none transition-colors resize-y">{{ old('message') }}</textarea>
                     </div>
                     <button type="submit" class="bg-[#0A0A0A] text-white px-8 py-3 rounded-lg text-sm font-medium hover:bg-[#171717] transition-all shadow-lg shadow-[#0A0A0A]/10 flex items-center gap-2 group">
                         <span>Send Message</span>

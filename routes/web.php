@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('main');
@@ -183,4 +184,6 @@ Route::get('/news/{slug}', function ($slug) {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::post('/contacts', [ContactController::class, 'send'])->name('contacts.send');
 
