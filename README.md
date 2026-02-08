@@ -1,10 +1,10 @@
 # Xinji Website
 
-Laravel 11 website for Xinji company.
+Laravel 10 website for Xinji company.
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.1 or higher
 - Composer
 
 ## Installation
