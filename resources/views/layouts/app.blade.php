@@ -15,7 +15,9 @@
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <!-- CSS -->
-    @vite(['resources/css/app.css'])
+    @if(config('app.env') === 'local' && file_exists(public_path('hot')))
+        @vite(['resources/css/app.css'])
+    @endif
     
     <script>
         tailwind.config = {
