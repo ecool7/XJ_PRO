@@ -32,11 +32,10 @@
                         <div>
                             <div class="text-xs text-[#737373] uppercase tracking-wider mb-2 font-medium">Address</div>
                             <div class="text-[#0A0A0A] leading-relaxed text-base">
-                                XINJI TECHNOLOGIES (HK) CO.,<br>
-                                LIMITED<br><br>
+                                Unit D3, 11/F, Luk Hop Industrial Building,<br>
+                                No.8 Luk Hop Street, San Po Kong,<br><br>
                                 RM4, 16/F HO KING COMM CTR 2-16<br>
-                                FAYUEN ST MONGKOK KL HONG<br>
-                                KONG
+                                Kowloon, HK
                             </div>
                         </div>
                         <div class="pt-4 border-t border-[#E5E5E5]">
