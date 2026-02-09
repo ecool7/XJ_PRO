@@ -34,7 +34,6 @@
                             <div class="text-[#0A0A0A] leading-relaxed text-base">
                                 Unit D3, 11/F, Luk Hop Industrial Building,<br>
                                 No.8 Luk Hop Street, San Po Kong,<br><br>
-                                RM4, 16/F HO KING COMM CTR 2-16<br>
                                 Kowloon, HK
                             </div>
                         </div>
