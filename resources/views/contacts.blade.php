@@ -62,7 +62,7 @@
                     <h2 class="font-display text-2xl font-medium text-[#0A0A0A] mb-8 tracking-tight">Location</h2>
                     <div class="w-full h-[500px] rounded-lg overflow-hidden border border-[#E5E5E5]">
                         <iframe 
-                            src="https://www.google.com/maps?q=Shenzhen,+Guangdong,+China&hl=en&output=embed"
+                            src="https://www.google.com/maps?q=Hong+Kong&hl=en&output=embed"
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
