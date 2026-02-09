@@ -142,11 +142,9 @@
                 <div class="space-y-5">
                     <h4 class="font-sans text-xs font-bold text-obsidian tracking-tight">Contacts</h4>
                     <div class="font-sans text-xs text-obsidian leading-relaxed space-y-1">
-                        <p>XINJI TECHNOLOGIES (HK) CO.,</p>
-                        <p>LIMITED</p>
-                        <p>RM4, 16/F HO KING COMM CTR 2-16</p>
-                        <p>FAYUEN ST MONGKOK KL HONG</p>
-                        <p>KONG</p>
+                        <p>Unit D3, 11/F, Luk Hop Industrial Building,</p>
+                        <p>No.8 Luk Hop Street, San Po Kong,</p>
+                        <p>Kowloon, HK</p>
                     </div>
                 </div>
             </div>
